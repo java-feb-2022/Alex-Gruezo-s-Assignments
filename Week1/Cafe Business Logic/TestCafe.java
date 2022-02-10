@@ -46,5 +46,27 @@ public class TestCafe {
         double cost = 1.75;
         int amount = 5;
         appTest.quantityDiscount("Kona Coffee", cost, amount);
+
+        System.out.println("\n----- Overloaded Display Menu -----");
+        ArrayList<String> menu2 = new ArrayList<String>();
+        menu2.add("drip coffee");
+        menu2.add("cappuccino");
+        menu2.add("latte");
+        menu2.add("mocha");
+
+        ArrayList<Double> price2 = new ArrayList<Double>();
+        price2.add(1.50);
+        price2.add(3.50);
+        price2.add(4.50);
+        price2.add(3.50);
+        // uncomment below to return false
+        // price2.add(1.50); 
+
+        appTest.displayMenu(menu2, price2);
+
+        // Sensei Bonus Test
+        System.out.println("\n----- Add Customer Sensei Method -----");
+        ArrayList<String> customers2 = new ArrayList<String>();
+        appTest.addCustomers2(customers2);
     }
 }
