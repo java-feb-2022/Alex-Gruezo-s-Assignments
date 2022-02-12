@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 
@@ -58,9 +57,8 @@ public class PuzzleJava {
 
     public ArrayList<Object> shuffleArray (ArrayList<Object> array) {
 
-        
-        // ArrayList<Integer> newArray = new ArrayList<Integer>();
         if (array.size() > 2) {
+            
             for (int i = 0; i < array.size(); i++) {
 
                 int index = rand.nextInt(array.size()-1);
@@ -74,7 +72,6 @@ public class PuzzleJava {
                 
             }
         }
-        
 
         else {
 
@@ -83,16 +80,6 @@ public class PuzzleJava {
         }
         
         return array;
-
-        // Random r = new Random();
-		// for(int i = 0; i < arr.length/2; i++) {
-		// 	Object temp = arr[i];
-		// 	int randomIdx = r.nextInt(arr.length - i) + i;
-		// 	arr[i] = arr[randomIdx];
-		// 	arr[randomIdx] = temp;
-
-        
-
 
     }
     
