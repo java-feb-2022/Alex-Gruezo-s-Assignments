@@ -26,5 +26,17 @@ public class TestPuzzleJava {
 		System.out.println("\n----- New Password Set -----");
 		ArrayList<String> newPassword = generator.getNewPasswordSet(5);
 		System.out.println(newPassword);
+
+		// shuffleArray Test
+		System.out.println("\n----- Shuffle Array Test -----");
+		ArrayList<Object> shuffle = new ArrayList<Object>();
+		shuffle.add(5);
+		shuffle.add("Java");
+		shuffle.add(8);
+		shuffle.add("Python");
+		// shuffle.add(22);
+		ArrayList<Object> newList = generator.shuffleArray(shuffle);
+		System.out.println(newList);
+		
 	}
 }
