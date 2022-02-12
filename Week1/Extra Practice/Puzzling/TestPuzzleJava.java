@@ -33,9 +33,16 @@ public class TestPuzzleJava {
 		shuffle.add("Java");
 		shuffle.add(8);
 		shuffle.add("Python");
-		// shuffle.add(22);
 		ArrayList<Object> newList = generator.shuffleArray(shuffle);
 		System.out.println(newList);
-		
+
+		// shuffleArray Test - Edge case
+		System.out.println("\n----- Shuffle Array Test -----");
+		ArrayList<Object> shuffleEdgeCase = new ArrayList<Object>();
+		shuffleEdgeCase.add(5);
+		shuffleEdgeCase.add("Java");
+		ArrayList<Object> edgeCaseList = generator.shuffleArray(shuffleEdgeCase);
+		System.out.println(edgeCaseList);
+
 	}
 }
