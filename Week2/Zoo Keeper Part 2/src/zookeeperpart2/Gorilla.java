@@ -1,7 +1,6 @@
 package zookeeperpart2;
 
-public class Gorilla extends Mammal{
-	
+public class Gorilla extends Mammal {
 	public Gorilla (int energyLevel) {
 		super(energyLevel);
 	}
@@ -21,5 +20,4 @@ public class Gorilla extends Mammal{
 		System.out.println("Gorilla has climbed a tree");
 		this.energyLevel -= 10;
 	}
-	
 }

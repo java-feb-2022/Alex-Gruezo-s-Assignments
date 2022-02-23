@@ -1,7 +1,6 @@
 package zookeeperpart2;
 
 public class Bat extends Mammal {
-
 	public Bat (int energyLevel) {
 		super(300);
 	}

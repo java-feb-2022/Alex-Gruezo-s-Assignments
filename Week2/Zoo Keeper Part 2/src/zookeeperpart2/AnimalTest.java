@@ -4,7 +4,6 @@ public class AnimalTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
 		Gorilla george = new Gorilla(0);
 		george.throwSomething();
 		george.throwSomething();
@@ -25,7 +24,6 @@ public class AnimalTest {
 		benny.fly();
 		benny.displayEnergyLevel();
 		
-
 	}
 
 }
