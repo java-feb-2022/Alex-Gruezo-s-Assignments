@@ -52,7 +52,7 @@ public class CounterController {
 		
 		session.setAttribute("count", 0);
 		
-		return "index.jsp";
+		return "redirect:/counter";
 	}
 
 }
