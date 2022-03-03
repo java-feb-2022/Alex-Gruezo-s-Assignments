@@ -25,7 +25,7 @@ public class BookController {
 		
 		viewModel.addAttribute("books", bookService.allBooks());
 		
-		System.out.println(bookService.allBooks());
+//		System.out.println(bookService.allBooks());
 		return "index.jsp";
 	}
 	

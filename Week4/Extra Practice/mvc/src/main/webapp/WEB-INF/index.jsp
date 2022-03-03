@@ -16,17 +16,15 @@
 <table class="table table-primary">
 	<thead>
 		<th>Title</th>
-		<th >Description</th>
-		<th>Number of Pages</th>
 		<th>Language</th>
+		<th>Number of Pages</th>
 	</thead>
 	<tbody>
 		<c:forEach items="${books}" var = "book">
 		<tr>
-			<td>${book.title}</td>
-			<td>${book.description}</td>
-			<td>${book.numberOfPages}</td>
+			<td><a href = "/books/${book.id}">${book.title}</a></td>
 			<td>${book.language}</td>
+			<td>${book.numberOfPages}</td>
 		</tr>
 		</c:forEach>
 	</tbody>
