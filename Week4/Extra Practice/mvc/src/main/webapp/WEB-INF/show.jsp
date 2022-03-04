@@ -10,13 +10,9 @@
 <title>One Book</title>
 </head>
 <body>
-	<div class="container-fluid m-3">
-		<h1>${book.title}</h1>
-		<p>Description: <c:out value="${book.description}"/></p>
-		<p>Language: <c:out value="${book.language}"/></p>
-		<p>Number of Pages: <c:out value="${book.numberOfPages}"/></p>
-		<a href = "/" class="btn btn-primary">Dashboard</a>
+<h1>${book.title}</h1>
+<p>Description: <c:out value="${book.description}"/></p>
+<p>Language: <c:out value="${book.language}"/></p>
+<p>Number of Pages: <c:out value="${book.numberOfPages}"/></p>
 </body>
-	</div>
-		
 </html>
