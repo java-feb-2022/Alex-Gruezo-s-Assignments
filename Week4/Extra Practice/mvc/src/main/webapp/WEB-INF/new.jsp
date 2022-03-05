@@ -14,28 +14,31 @@
 <body>
 
 
-<div class="container-fluid">
-	<div class="row justify-content-around my-2 gy-3">
-		<div class="col-12 col-md-4">
-        	<form:form action="/books/create" method="post" modelAttribute="book" class="p-4 bg-dark text-light">
-            	<h2 class="text-primary">New Book</h2>
-                    <form:label path="title" class="py-2">Title: </form:label>
-                    <form:errors path="title"/>
-                    <form:input path="title" class="form-control"/>
-                    <form:label path="description" class="py-2">Description: </form:label>
-                    <form:errors path="description"/>
-                    <form:textarea path="description" class="form-control rows='3' h-25"/>
-                    <form:label path="language" class="py-2">Language: </form:label>
-                    <form:errors path="language"/>
-                    <form:input path="language" class="form-control"/>
-                    <form:label path="numberOfPages" class="py-2">Pages: </form:label>
-                    <form:errors path="numberOfPages"/>
-                    <form:input type="number" path="numberOfPages" class="form-control"/>
-                    <p class="pt-3">
-                        <input type="submit" value="Submit" class="btn btn-primary">
-                        <a href = "/" class="btn btn-primary">Dashboard</a>
-                    </p>
-                </form:form>
-            </div>
+	<div class="container-fluid">
+		<div class="row justify-content-around my-2 gy-3">
+			<div class="col-12 col-md-4">
+	        	<form:form action="/books/create" method="post" modelAttribute="book" class="p-4 bg-dark text-light">
+	            	<h2 class="text-primary">New Book</h2>
+	                    <form:label path="title" class="py-2">Title: </form:label>
+	                    <form:errors path="title"/>
+	                    <form:input path="title" class="form-control"/>
+	                    <form:label path="description" class="py-2">Description: </form:label>
+	                    <form:errors path="description"/>
+	                    <form:textarea path="description" class="form-control rows='3' h-25"/>
+	                    <form:label path="language" class="py-2">Language: </form:label>
+	                    <form:errors path="language"/>
+	                    <form:input path="language" class="form-control"/>
+	                    <form:label path="numberOfPages" class="py-2">Pages: </form:label>
+	                    <form:errors path="numberOfPages"/>
+	                    <form:input type="number" path="numberOfPages" class="form-control"/>
+	                    <p class="pt-3">
+	                        <input type="submit" value="Submit" class="btn btn-primary">
+	                        <a href = "/" class="btn btn-primary">Dashboard</a>
+	                    </p>
+	          	</form:form>
+	      	</div>
+	 	</div>
+	 </div>
+	 
 </body>
 </html>

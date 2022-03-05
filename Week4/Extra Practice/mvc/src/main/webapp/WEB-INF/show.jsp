@@ -16,7 +16,8 @@
 		<p>Language: <c:out value="${book.language}"/></p>
 		<p>Number of Pages: <c:out value="${book.numberOfPages}"/></p>
 		<a href = "/" class="btn btn-primary">Dashboard</a>
-</body>
 	</div>
+</body>
+	
 		
 </html>
