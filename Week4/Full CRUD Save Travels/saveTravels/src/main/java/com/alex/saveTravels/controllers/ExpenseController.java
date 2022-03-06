@@ -67,7 +67,7 @@ public class ExpenseController {
 		public String updateExpense(@Valid @ModelAttribute("expense") Expense expense, BindingResult result) {
 		
 		if(result.hasErrors()) {
-			return "index.jsp";
+			return "edit.jsp";
 		} else {
 			expenseService.updateExpense(expense);
 			return "redirect:/";
