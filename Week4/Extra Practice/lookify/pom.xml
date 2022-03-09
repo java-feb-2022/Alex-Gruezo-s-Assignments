@@ -8,7 +8,7 @@
 		<version>2.6.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>.com.alex.lookify</groupId>
+	<groupId>com.alex.lookify</groupId>
 	<artifactId>lookify</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>lookify</name>
