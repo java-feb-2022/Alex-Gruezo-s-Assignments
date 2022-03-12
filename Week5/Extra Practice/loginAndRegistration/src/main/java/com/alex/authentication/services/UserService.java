@@ -42,7 +42,7 @@ public class UserService {
 	public User findByEmail(String email) {
 		
 		return userRepository.findByEmail(email);
-	}
+	} 
 	//	find user by id
 	public User findById(Long id) {
 		
