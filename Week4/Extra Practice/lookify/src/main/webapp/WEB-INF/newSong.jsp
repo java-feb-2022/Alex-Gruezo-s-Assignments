@@ -22,7 +22,7 @@
 		<div class="row justify-content-around my-2">
 			<div class="col-12 col-md-9">
 	        	<form:form action="/songs/create" method="post" modelAttribute="song" class="p-4 bg-dark text-light">
-	            	<h2 class="text-primary">Add a Language</h2>
+	            	<h2 class="text-primary">Add a Song</h2>
 	            		<div class="row g-3 my-3">
 	            			<div class="col-6">
 	            				<form:label path="title" class="py-2">Title </form:label>
