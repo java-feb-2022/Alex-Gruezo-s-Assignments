@@ -2,7 +2,6 @@ package com.alex.bookClub.controllers;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -100,7 +99,7 @@ public class MainController {
 		
 		if(session.getAttribute("loggedInUser") != null) {
 			
-			System.out.println(session.getAttribute("loggedInUser"));
+			//System.out.println(session.getAttribute("loggedInUser"));
 			viewModel.addAttribute("books", bookService.getAllBooks()); 
 			return "dashboard.jsp";
 		} else {
@@ -145,6 +144,7 @@ public class MainController {
 			
 			Book book = bookService.showOne(id);
 			viewModel.addAttribute("book", book);
+			viewModel.addAttribute("user", userService.findByEmail("loggedInUser"));
 			
 			return "showBook.jsp";
 		} else {
@@ -162,7 +162,6 @@ public class MainController {
 			
 			Book book = bookService.showOne(id);
 			viewModel.addAttribute("editBook", book);
-			
 			return "editBook.jsp";
 		} else {
 			return "redirect:/";
@@ -171,19 +170,19 @@ public class MainController {
 	
 	@PutMapping("/books/{id}/update")
 	public String updateBook(
+			@PathVariable ("id") Long id,
 			@Valid @ModelAttribute("editBook") Book book,
 			BindingResult result,
 			Model viewModel) {
 		
+		
 		if(result.hasErrors()) {
 			
 			return "editBook.jsp";
-		} else {
+		} 
 			
-			System.out.println(book.getId());
-			bookService.update(book);
-			return "redirect:/books";
-		}
+		bookService.update(book);
+		return "redirect:/books";
 	}
 		 
 	

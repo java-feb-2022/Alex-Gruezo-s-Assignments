@@ -21,8 +21,9 @@
 		<div class="d-flex col-12 col-md-8 mx-auto justify-content-between">
 			<div class="my-3">
 			<h1 class="text-primary">Change Your Entry!</h1>
+			
 			${loggedInUser.userName}
-			${book.id}
+			${id}
 			</div>
 			<div class="my-2 row align-items-center">
 				<p>
@@ -31,7 +32,7 @@
 			</div>
 		</div>
 		<div class="col-12 col-md-8 mx-auto">
-        	<form:form action="/books/{id}/update" method="put" modelAttribute="editBook" class="p-4 bg-light text-primary">
+        	<form:form action="/books/${id}/update" method="put" modelAttribute="editBook" class="p-4 bg-light text-primary">
                 <div class="row g-3 my-3">
                 	<div class="col-3">
                 		<form:label path="title" class="py-2">Title </form:label>
@@ -61,7 +62,7 @@
                 	<div>
                 		<form:errors path="user" class="error"/>
                 		<form:input type="hidden" path="user" value="${loggedInUser.id}" class="form-control"/>
-                	</div>
+                	</div>	
                 </div>
                 <p class="col-9 text-end">
                 	<input type="submit" value="Submit" class="btn btn-primary">
