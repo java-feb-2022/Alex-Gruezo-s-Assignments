@@ -53,13 +53,13 @@ public class UserService {
 	//	authenticate user
 	public boolean authenticateUser(LoginUser newLogin, Errors errors) {
 		
-		User user = userRepository.findByEmail(newLogin.getEmail());
+		User user = userRepository.findByEmail(newLogin.getUserEmail());
 		if(user == null) {
-			errors.rejectValue("password", "Matches", "");
+			errors.rejectValue("userPassword", "Matches", "");
 			return false;
 		} else {
-			if(BCrypt.checkpw(newLogin.getPassword(), user.getPassword())) {
-				errors.rejectValue("password", "Matches", "Invalid Password!!!");
+			if(BCrypt.checkpw(newLogin.getUserPassword(), user.getPassword())) {
+				errors.rejectValue("userPassword", "Matches", "Invalid Password!!!");
 				return false;
 			}
 		}

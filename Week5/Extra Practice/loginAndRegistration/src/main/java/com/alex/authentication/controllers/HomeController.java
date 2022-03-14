@@ -62,7 +62,7 @@ public class HomeController {
 			return "index.jsp";
 		}
 		
-		User loggedInUser = userService.findByEmail(loginUser.getEmail());
+		User loggedInUser = userService.findByEmail(loginUser.getUserEmail());
 		// put user in session
 		session.setAttribute("loggedInUser", loggedInUser);
 		return "redirect:/dashboard";

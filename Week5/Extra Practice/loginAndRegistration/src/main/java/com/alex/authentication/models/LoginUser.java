@@ -8,31 +8,33 @@ public class LoginUser {
 
 	@NotEmpty(message="Email is required!")
     @Email(message="Please enter a valid email!")
-    private String email;
+    private String userEmail;
     
     @NotEmpty(message="Password is required!")
     @Size(min=8, max=200, message="Incorrect password!")
-    private String password;
+    private String userPassword;
     
     public LoginUser() {
     	
     }
 
-	public String getEmail() {
-		return email;
+	public String getUserEmail() {
+		return userEmail;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getUserPassword() {
+		return userPassword;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
 	}
+
+	
     
     
 }

@@ -45,12 +45,12 @@
             <div class="col-12 col-md-4">
                 <form:form action="/login" method="post" modelAttribute="newLogin" class="p-4 bg-dark text-light">
                     <h2 class="text-success">Login</h2>
-                    <form:label path="email" class="py-2">Email:</form:label>
-                    <form:errors path="email" class="text-danger"/>
-                    <form:input path="email" type="email" class="form-control"/>
-                    <form:label path="password" class="py-2">Password:</form:label>
-                    <form:errors path="password" class="text-danger"/>
-                    <form:input type="password" path="password" class="form-control"/>
+                    <form:label path="userEmail" class="py-2">Email:</form:label>
+                    <form:errors path="userEmail" class="text-danger"/>
+                    <form:input path="userEmail" type="email" class="form-control"/>
+                    <form:label path="userPassword" class="py-2">Password:</form:label>
+                    <form:errors path="userPassword" class="text-danger"/>
+                    <form:password path="userPassword" class="form-control"/>
                     <p class="pt-3">
                         <input type="submit" value="Login" class="btn btn-success">
                     </p>
