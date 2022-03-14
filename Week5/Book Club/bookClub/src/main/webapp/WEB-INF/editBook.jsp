@@ -21,9 +21,6 @@
 		<div class="d-flex col-12 col-md-8 mx-auto justify-content-between">
 			<div class="my-3">
 			<h1 class="text-primary">Change Your Entry!</h1>
-			
-			${loggedInUser.userName}
-			${id}
 			</div>
 			<div class="my-2 row align-items-center">
 				<p>

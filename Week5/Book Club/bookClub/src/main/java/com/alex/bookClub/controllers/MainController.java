@@ -161,9 +161,11 @@ public class MainController {
 		if(session.getAttribute("loggedInUser") != null) {
 			
 			Book book = bookService.showOne(id);
+			
 			viewModel.addAttribute("editBook", book);
 			return "editBook.jsp";
 		} else {
+			
 			return "redirect:/";
 		}
 	}
