@@ -109,8 +109,6 @@ public class MainController {
 			return "redirect:/";
 		}
 	}
-
-//****** CREATE BOOK ******//	
 	
 	@GetMapping("/books/new")
 	public String newBook(
@@ -139,8 +137,6 @@ public class MainController {
 		
 	}
 	
-//****** DISPLAY BOOK ******//
-	
 	@GetMapping("/books/{id}")
 	public String showBook(
 			@PathVariable("id") Long id,
@@ -158,9 +154,7 @@ public class MainController {
 			return "redirect:/";
 		}
 	}
-
-//****** EDIT BOOK ******//	
-
+	
 	@GetMapping("/books/{id}/edit")
 	public String editBook(
 			@PathVariable("id") Long id,
@@ -195,8 +189,6 @@ public class MainController {
 		bookService.update(book);
 		return "redirect:/books";
 	}
-	
-//****** DELETE BOOK ******//
 		 
 	@DeleteMapping("/books/{id}/delete")
 	public String destroyBook (
@@ -206,8 +198,6 @@ public class MainController {
 		return "redirect:/books";
 	}
 	
-//****** BOOK MARKET DASHBOARD ******//	
-
 	@GetMapping("/bookmarket")
 	public String bookMarket(
 			@ModelAttribute("unborrowedBooks") Book book,
@@ -228,8 +218,6 @@ public class MainController {
 			return "redirect:/";
 		}
 	}
-	
-//****** BORROW/RETURN BOOK VIA FORM TAG IN BUTTON ******//
 	
 	@PutMapping("/books/borrow/{id}")
 	public String borrowBook (
@@ -264,31 +252,6 @@ public class MainController {
 		
 		book.setBorrower(null);
 		bookService.update(book);
-		return "redirect:/bookmarket";
-	}
-	
-//****** BORROW/RETURN BOOK VIA ROUTE ONLY IN BUTTON ******//
-	
-	@GetMapping("books/add/{id}")
-	public String borrow(
-			@PathVariable("id") Long id,
-			HttpSession session) {
-		
-		User user = (User) session.getAttribute("loggedInUser");
-		Book book = bookService.showOne(id);
-		bookService.borrowBook(book, user);
-		
-		return "redirect:/bookmarket";
-	}
-	
-	@GetMapping("books/remove/{id}")
-	public String unborrow(
-			@PathVariable("id") Long id,
-			HttpSession session) {
-		
-		User user = (User) session.getAttribute("loggedInUser");
-		Book book = bookService.showOne(id);
-		bookService.unborrowBook(book, user);
 		
 		return "redirect:/bookmarket";
 	}
