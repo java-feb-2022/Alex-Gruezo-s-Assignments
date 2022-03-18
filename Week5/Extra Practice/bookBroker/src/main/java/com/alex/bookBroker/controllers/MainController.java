@@ -252,7 +252,7 @@ public class MainController {
 		
 		book.setBorrower(null);
 		bookService.update(book);
-		//
+		
 		return "redirect:/bookmarket";
 	}
 			
