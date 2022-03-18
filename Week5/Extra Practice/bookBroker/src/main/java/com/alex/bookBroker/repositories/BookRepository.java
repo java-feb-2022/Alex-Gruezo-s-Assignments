@@ -12,10 +12,13 @@ import com.alex.bookBroker.models.Book;
 @Repository
 public interface BookRepository extends CrudRepository<Book, Long>{
 	
+	// get all
 	List<Book> findAll();
 	
+	// get all books with no borrowers
 	List<Book> findByBorrowerIsNull();
 	
+	// get all books with borrowers
 	List<Book> findByBorrowerIsNotNull();
 	
 	
