@@ -55,7 +55,7 @@
                     	<form:errors path="thoughts" class="text-danger"/>
                 	</div>
                 	<div class="col-6">
-                		<form:textarea path="thoughts" class="form-control h-25" rows="5"/>
+                		<form:textarea path="thoughts" class="form-control" rows="3"/>
                 	</div>
                 	<div>
                 		<form:errors path="owner" class="error"/>
