@@ -63,6 +63,10 @@
                 	<div>
                 		<form:errors path="owner" class="error"/>
                 		<form:input type="hidden" path="owner" value="${loggedInUser.id}" class="form-control"/>
+                	</div>
+                	<div>
+                		<form:errors path="borrower" class="error"/>
+                		<form:input type="hidden" path="borrower" value="${editBook.borrower.id}" class="form-control"/>
                 	</div>	
                 </div>   
           	</form:form>
